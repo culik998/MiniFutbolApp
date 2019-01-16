@@ -34,16 +34,26 @@ namespace MiniFutbolApp.Forms
                     Password = textBox_password.Text,
                     ConfirmPassword = textBox_confirmpassword.Text,
                     RegisterDate=DateTime.Now,
-                    BirthDay=dateTimePicker1.Value
+                    BirthDay=dateTimePicker1.Value,
+                    PhotoPath=openFileDialog1.FileName
 
 
                 };
 
                 db.Users.Add(user);
                 db.SaveChanges();
-         
-               
-                MessageBox.Show("You've registrered");
+
+
+                MessageBox.Show($"Player {user.Name} {user.SurName} has been registered");
+            }
+        }
+
+        private void btn_choosephoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog()== DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
             }
         }
     }

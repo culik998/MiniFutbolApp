@@ -39,6 +39,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_choosephoto = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -107,7 +111,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(99, 430);
+            this.button1.Location = new System.Drawing.Point(444, 408);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 33);
             this.button1.TabIndex = 8;
@@ -117,7 +121,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(331, 174);
+            this.dateTimePicker1.Location = new System.Drawing.Point(349, 79);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 11;
@@ -125,17 +129,42 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(328, 131);
+            this.label6.Location = new System.Drawing.Point(346, 36);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 12;
             this.label6.Text = "BirthDay Date";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(362, 160);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(224, 164);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_choosephoto
+            // 
+            this.btn_choosephoto.Location = new System.Drawing.Point(644, 264);
+            this.btn_choosephoto.Name = "btn_choosephoto";
+            this.btn_choosephoto.Size = new System.Drawing.Size(86, 23);
+            this.btn_choosephoto.TabIndex = 14;
+            this.btn_choosephoto.Text = "Choose Photo";
+            this.btn_choosephoto.UseVisualStyleBackColor = true;
+            this.btn_choosephoto.Click += new System.EventHandler(this.btn_choosephoto_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 528);
+            this.Controls.Add(this.btn_choosephoto);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
@@ -150,6 +179,7 @@
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +198,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_choosephoto;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

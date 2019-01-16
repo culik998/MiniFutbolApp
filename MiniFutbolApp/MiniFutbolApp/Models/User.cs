@@ -23,5 +23,7 @@ namespace MiniFutbolApp.Models
         public string Password { get; set; }
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
+
+        public string PhotoPath { get; set; }
     }
 }

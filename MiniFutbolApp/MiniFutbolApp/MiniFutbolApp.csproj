@@ -80,6 +80,10 @@
     <Compile Include="Migrations\201901151716431_sdd.Designer.cs">
       <DependentUpon>201901151716431_sdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901161317150_fhds.cs" />
+    <Compile Include="Migrations\201901161317150_fhds.Designer.cs">
+      <DependentUpon>201901161317150_fhds.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Enum.cs" />
     <Compile Include="Models\Game.cs" />
@@ -105,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901151716431_sdd.resx">
       <DependentUpon>201901151716431_sdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901161317150_fhds.resx">
+      <DependentUpon>201901161317150_fhds.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
