@@ -84,6 +84,18 @@
     <Compile Include="Migrations\201901161317150_fhds.Designer.cs">
       <DependentUpon>201901161317150_fhds.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901161654138_safdjsn.cs" />
+    <Compile Include="Migrations\201901161654138_safdjsn.Designer.cs">
+      <DependentUpon>201901161654138_safdjsn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901161655449_jsdsd.cs" />
+    <Compile Include="Migrations\201901161655449_jsdsd.Designer.cs">
+      <DependentUpon>201901161655449_jsdsd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901161657042_sjnfjs.cs" />
+    <Compile Include="Migrations\201901161657042_sjnfjs.Designer.cs">
+      <DependentUpon>201901161657042_sjnfjs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Enum.cs" />
     <Compile Include="Models\Game.cs" />
@@ -92,6 +104,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserContext.cs" />
+    <Compile Include="Validation\CustomValidator.cs" />
     <EmbeddedResource Include="Forms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +125,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901161317150_fhds.resx">
       <DependentUpon>201901161317150_fhds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901161654138_safdjsn.resx">
+      <DependentUpon>201901161654138_safdjsn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901161655449_jsdsd.resx">
+      <DependentUpon>201901161655449_jsdsd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901161657042_sjnfjs.resx">
+      <DependentUpon>201901161657042_sjnfjs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Photos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

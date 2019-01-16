@@ -42,6 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_choosephoto = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.lbl_errors = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,9 +138,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(362, 160);
+            this.pictureBox1.Location = new System.Drawing.Point(349, 131);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(224, 164);
+            this.pictureBox1.Size = new System.Drawing.Size(246, 175);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -158,13 +159,23 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // lbl_errors
+            // 
+            this.lbl_errors.AutoSize = true;
+            this.lbl_errors.Location = new System.Drawing.Point(695, 63);
+            this.lbl_errors.Name = "lbl_errors";
+            this.lbl_errors.Size = new System.Drawing.Size(10, 13);
+            this.lbl_errors.TabIndex = 15;
+            this.lbl_errors.Text = " ";
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 528);
-            this.Controls.Add(this.btn_choosephoto);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lbl_errors);
+            this.Controls.Add(this.btn_choosephoto);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
@@ -201,5 +212,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_choosephoto;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label lbl_errors;
     }
 }

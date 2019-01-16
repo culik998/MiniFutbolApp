@@ -1,9 +1,12 @@
 ﻿using MiniFutbolApp.Models;
+using MiniFutbolApp.Validation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,26 +38,43 @@ namespace MiniFutbolApp.Forms
                     ConfirmPassword = textBox_confirmpassword.Text,
                     RegisterDate=DateTime.Now,
                     BirthDay=dateTimePicker1.Value,
-                    PhotoPath=openFileDialog1.FileName
-
-
+                    PhotoPath= Path.GetFileName(openFileDialog1.FileName)
                 };
 
-                db.Users.Add(user);
-                db.SaveChanges();
+                if (this.isValid(user).Item1)
+                {
+                    db.Users.Add(user);
+                    db.SaveChanges();
+                    var path = Path.Combine(@"C:\Users\SuleymanSHs\Desktop\Minifutbol\MiniFutbolApp\MiniFutbolApp\Photos", Path.GetFileName(openFileDialog1.FileName));
+                    File.Copy(openFileDialog1.FileName, path);
+
+                    MessageBox.Show($"Player {user.Name} {user.SurName} has been registered");
+                }
+
+                else
+                {
+                   
+                    foreach (var validationResult in this.isValid(user).Item2)
+                    {
+                        lbl_errors.Text += validationResult.ErrorMessage + "\n";
+                    }
+                }
 
 
-                MessageBox.Show($"Player {user.Name} {user.SurName} has been registered");
+             
+              
             }
         }
 
         private void btn_choosephoto_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog()== DialogResult.OK)
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+                pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
+
             }
+            
         }
     }
 }
