@@ -52,12 +52,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateTeamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateTeamForm.Designer.cs">
+      <DependentUpon>CreateTeamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastucture\UserExtension.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,17 +121,52 @@
     <Compile Include="Migrations\201901161657042_sjnfjs.Designer.cs">
       <DependentUpon>201901161657042_sjnfjs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901162301164_sdsd.cs" />
+    <Compile Include="Migrations\201901162301164_sdsd.Designer.cs">
+      <DependentUpon>201901162301164_sdsd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901171220257_fnjfnj.cs" />
+    <Compile Include="Migrations\201901171220257_fnjfnj.Designer.cs">
+      <DependentUpon>201901171220257_fnjfnj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901171406514_dsnad.cs" />
+    <Compile Include="Migrations\201901171406514_dsnad.Designer.cs">
+      <DependentUpon>201901171406514_dsnad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Enum.cs" />
+    <Compile Include="MiniFootballDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MiniFootballDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MiniFootballDbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MiniFootballDbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Status.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserContext.cs" />
     <Compile Include="Validation\CustomValidator.cs" />
+    <EmbeddedResource Include="Forms\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateTeamForm.resx">
+      <DependentUpon>CreateTeamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -135,6 +195,15 @@
     <EmbeddedResource Include="Migrations\201901161657042_sjnfjs.resx">
       <DependentUpon>201901161657042_sjnfjs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901162301164_sdsd.resx">
+      <DependentUpon>201901162301164_sdsd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901171220257_fnjfnj.resx">
+      <DependentUpon>201901171220257_fnjfnj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901171406514_dsnad.resx">
+      <DependentUpon>201901171406514_dsnad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -143,7 +212,30 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="MiniFootballDbDataSet.xsc">
+      <DependentUpon>MiniFootballDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MiniFootballDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MiniFootballDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MiniFootballDbDataSet.xss">
+      <DependentUpon>MiniFootballDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MiniFootballDbDataSet1.xsc">
+      <DependentUpon>MiniFootballDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MiniFootballDbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MiniFootballDbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MiniFootballDbDataSet1.xss">
+      <DependentUpon>MiniFootballDbDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -159,7 +251,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Photos\" />
+    <Folder Include="TeamLogos\" />
+    <Folder Include="UserPhotos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camp-nou.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maracana.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

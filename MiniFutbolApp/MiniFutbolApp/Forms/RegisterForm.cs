@@ -38,17 +38,21 @@ namespace MiniFutbolApp.Forms
                     ConfirmPassword = textBox_confirmpassword.Text,
                     RegisterDate=DateTime.Now,
                     BirthDay=dateTimePicker1.Value,
-                    PhotoPath= Path.GetFileName(openFileDialog1.FileName)
+                    PhotoPath= Path.GetFileName(openFileDialog1.FileName),
+                    Status= Status.User
                 };
 
-                if (this.isValid(user).Item1)
+                var valid = this.isValid(user);
+
+                if (valid.Item1)
                 {
                     db.Users.Add(user);
                     db.SaveChanges();
-                    var path = Path.Combine(@"C:\Users\SuleymanSHs\Desktop\Minifutbol\MiniFutbolApp\MiniFutbolApp\Photos", Path.GetFileName(openFileDialog1.FileName));
+                    var path = Path.Combine(@"C:\Users\User\Desktop\Miniftboll\MiniFutbolApp\MiniFutbolApp\UserPhotos", Path.GetFileName(openFileDialog1.FileName));
                     File.Copy(openFileDialog1.FileName, path);
-
                     MessageBox.Show($"Player {user.Name} {user.SurName} has been registered");
+                    UserForm userForm = new UserForm();
+                    userForm.ShowDialog();
                 }
 
                 else

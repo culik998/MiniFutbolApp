@@ -61,5 +61,7 @@ namespace MiniFutbolApp.Models
 
 
         public string PhotoPath { get; set; }
+
+        public Status Status { get; set; }
     }
 }
