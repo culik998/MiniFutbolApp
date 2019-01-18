@@ -41,6 +41,7 @@ namespace MiniFutbolApp.Forms
                 using (UserContext db = new UserContext())
                 {
                     loggedUser = db.Users.GetUser(loginModel);
+                    UserInformation.MyUser.Add(loggedUser);
                 }
                 if (loggedUser != null)
                 {

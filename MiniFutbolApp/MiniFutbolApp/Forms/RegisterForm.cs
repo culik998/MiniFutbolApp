@@ -18,6 +18,7 @@ namespace MiniFutbolApp.Forms
     {
         public RegisterForm()
         {
+            var a = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName);
             InitializeComponent();
         }
 
@@ -48,13 +49,12 @@ namespace MiniFutbolApp.Forms
                 {
                     db.Users.Add(user);
                     db.SaveChanges();
-                    var path = Path.Combine(@"C:\Users\User\Desktop\Miniftboll\MiniFutbolApp\MiniFutbolApp\UserPhotos", Path.GetFileName(openFileDialog1.FileName));
+                    var path = Path.Combine("/UserPhotos", Path.GetFileName(openFileDialog1.FileName));
                     File.Copy(openFileDialog1.FileName, path);
                     MessageBox.Show($"Player {user.Name} {user.SurName} has been registered");
                     UserForm userForm = new UserForm();
                     userForm.ShowDialog();
                 }
-
                 else
                 {
                    

@@ -51,7 +51,7 @@ namespace MiniFutbolApp.Forms
                 db.Teams.Add(team);
                 db.SaveChanges();
 
-                var path = Path.Combine(@"C:\Users\User\Desktop\Miniftboll\MiniFutbolApp\MiniFutbolApp\TeamLogos", Path.GetFileName(openFileDialog1.FileName));
+                var path = Path.Combine(@"C:\Users\Suleymanshs\Desktop\mini\MiniFutbolApp\MiniFutbolApp\TeamLogos", Path.GetFileName(openFileDialog1.FileName));
                 File.Copy(openFileDialog1.FileName, path);
 
             }

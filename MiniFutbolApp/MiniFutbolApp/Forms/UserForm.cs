@@ -16,6 +16,7 @@ namespace MiniFutbolApp.Forms
         public UserForm()
         {
             InitializeComponent();
+            dataGridView2.DataSource = UserInformation.MyUser;
         }
 
         private void UserForm_Load(object sender, EventArgs e)
